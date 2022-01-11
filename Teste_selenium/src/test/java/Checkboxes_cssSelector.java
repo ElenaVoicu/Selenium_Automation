@@ -1,0 +1,34 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Checkboxes_cssSelector {
+public static void main(String[] args) throws InterruptedException {
+            System.setProperty("webdriver.chrome.driver","C:/Users/Voicu/Desktop/selenium/repository_Github/Teste_selenium"); // set the path of chromedriver
+            WebDriver driverChrome=new ChromeDriver();
+            driverChrome.get("https://formy-project.herokuapp.com/checkbox");
+            Thread.sleep(3000);
+            driverChrome.findElement(By.id("checkbox-1")).click();
+            Thread.sleep(3000);
+
+            WebElement checkbox2= driverChrome.findElement(By.id("checkbox-2"));
+            checkbox2.click();
+            Thread.sleep(3000);
+            driverChrome.findElement(By.id("checkbox-3")).click();
+            Thread.sleep(3000);
+            driverChrome.quit();
+
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+}
